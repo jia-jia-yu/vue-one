@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div v-bind:title="msg">鼠标悬停显示</div>
+        <img v-bind:src="url" alt="">
+    </div>
+</body>
+<script src="https://cn.vuejs.org/js/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:".app",
+        data:{
+            msg:"当前时间是:"+new Date().toLocaleString(),
+            url:"http://img4.imgtn.bdimg.com/it/u=1906469856,4113625838&fm=26&gp=0.jpg"
+        }
+    })
+</script>
+</html>

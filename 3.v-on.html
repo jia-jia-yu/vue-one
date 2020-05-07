@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="max">
+        <button v-on:click="but">点击显示/消失</button>
+        <br/>
+        <img v-if="show" v-bind:src="msg" alt="">
+    </div>
+</body>
+<script src="https://cn.vuejs.org/js/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:".max",
+        data:{
+            show:false,
+            msg:"http://img4.imgtn.bdimg.com/it/u=1906469856,4113625838&fm=26&gp=0.jpg"
+        },
+        methods:{
+            but:function(){
+                this.show = !this.show
+            }
+        }
+    })
+</script>
+</html>
